@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./UpImg.css">
+    <title>UpImg</title>
+</head>
+
+<body>
+
+    <div class="hero">
+        <div class="card">
+            <h1>Quỳnh Như</h1>
+            <p>@QuynhNhu</p>
+            <img src="./images/profile.png" id="profile-pic">
+            <label for="input-file">Update Image</label>
+            <input type="file" accept="image/png, image/jpg, image/jpeg" id="input-file">
+        </div>
+    </div>
+
+    <script>
+        let profilePic = document.getElementById("profile-pic");
+        let inputFile = document.getElementById("input-file");
+
+        inputFile.onchange = function() {
+            profilePic.src = URL.createObjectURL(inputFile.files[0]);
+            /*Nhấn vào Update Image sẽ thay đổi được hình ảnh*/
+        }
+    </script>
+</body>
+
+</html>
